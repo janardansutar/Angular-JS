@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Agular Js Page 1</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<script src='../js/angular.min.js'></script>
+</head>
+<body>
+	<h2>Agular Js - Data Filter and Search</h2>
+	<!-- {{}} this is an anguler expression-->
+	<div class="container" ng-init="data=['Adidas','Puma','Nike','Levis','Lee','Gas']">
+		
+	
+
+		<select class='form-control' ng-model="filterBrand">
+			<option value="2">Select 2</option>
+			<option value="4">Select 4</option>
+			<option value="5">Select 5</option>
+		</select>
+		<ul>
+			<li ng-repeat="ans in data | limitTo:filterBrand">
+				{{ans}}
+			</li>
+		</ul>
+
+		
+	</div>
+
+	
+
+
+
+
+
+	<script>
+		
+	</script>
+</body>
+</html>

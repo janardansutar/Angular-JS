@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Agular Js Page 1</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<script src='../js/angular.min.js'></script>
+</head>
+<body>
+	
+	<div class="container" ng-init="radData=1">
+		<input type="radio" name="rad" ng-model="radData" value="1" ng-checked="true"> 
+		Login
+		<input type="radio" name="rad" ng-model="radData" value="2"> Register
+		<input type="radio" name="rad" ng-model="radData" value="3"> Forgot Password
+
+		<hr>
+		<div ng-if="radData==1">Login</div>
+		<div ng-if="radData==2">Register</div>
+		<div ng-if="radData==3">Forgot Password</div>
+	</div>
+
+	<hr>
+
+	<div class="container" ng-init="radDataA=4">
+		<input tpye="text" name="rad" ng-model="radDataA" value="4" ng-checked="true"> 
+
+		<hr>
+		<div ng-if="radDataA==4">Login 4</div>
+		<div ng-if="radDataA==5">Register 5</div>
+		<div ng-if="radDataA==6">Forgot Password 6</div>
+	</div>
+
+	<hr>
+
+	<div ng-init="record=false" class='container'>
+		<input type="checkbox" ng-model="record">
+		<div ng-hide="record">Test 1</div>
+		<div ng-show="record">Test 2</div>
+	</div>
+
+	<hr>
+	<div ng-init="recordOne=true" class='container'>
+		<input type="checkbox" ng-model="recordOne">
+		<input type="password" ng-model="hello" ng-show="recordOne">
+		<input type="text" ng-model="hello" ng-hide="recordOne">
+	</div>
+</body>
+</html>

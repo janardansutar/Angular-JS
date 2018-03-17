@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Agular Js Page 1</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<script src='../js/angular.min.js'></script>
+</head>
+<body>
+	<h2>Agular Js - Data complex example</h2>
+	<!-- {{}} this is an anguler expression-->
+	<div class="container" ng-init="data=[{name:'Ajay',age:20},{name:'Vijay',age:22},{name:'sujay',age:23}]">
+		<!-- {{data}} -->
+
+		<div class="clearfix"></div>
+		<ul>
+			<li>{{data[0]}}</li>
+			<li>{{data[1]}}</li>
+			<li>{{data[2]}}</li>
+		</ul>
+
+		 <ul>
+			<li ng-repeat="ans in data">
+				{{ans}}
+			</li>
+		</ul>
+
+		<ul>
+			<li ng-repeat="ans in data">
+				{{ans.name + "--" + ans.age}} 
+			</li>
+		</ul> 
+
+		<ul>
+			<li ng-repeat="ans in data">
+				{{ans['name'] + "==" + ans['age']}}
+			</li>
+		</ul> 
+
+	</div>
+
+
+
+
+
+	<script>
+		
+	</script>
+</body>
+</html>
