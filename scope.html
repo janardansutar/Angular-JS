@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="modname">
+<head>
+<title>Agular Js Page 1</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<script src='../js/angular.min.js'></script>
+<script>
+	// console.log(angular);
+	app = angular.module("modname", []);
+	// console.log(app);
+	app.controller("contrlOne",function() {
+	});
+	app.controller("contrlTwo",function() {
+	});
+	app.controller("contrlThree",function() {
+	});
+</script>
+</head>
+<body>
+	<h1>Agular Js Scope</h1>
+	<!-- {{}} this is an anguler expression-->
+	<div class="container" ng-controller="contrlOne" ng-init="data=100">
+		{{data}}
+	</div>
+
+	<div class="container" ng-controller="contrlTwo" ng-init="data=1000">
+		{{data}}
+	</div>
+	<div class="container" ng-controller="contrlThree" ng-init="data=13000">
+		{{data}}
+	</div>
+
+
+
+
+	<script>
+		
+	</script>
+</body>
+</html>

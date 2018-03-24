@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="modname">
+<head>
+<title>Agular Js Page 1</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<script src='../js/angular.min.js'></script>
+<script>
+	// console.log(angular);
+	// app = angular.module("modname", []);
+	// // console.log(app);
+	// app.controller("contrlOne",function() {
+	// });
+
+	angular.module("modname", []).controller("contrlOne", function(){
+		this.name = "Akshay";
+		this.age = 12;
+		this.height = 5;
+	});
+</script>
+</head>
+<body>
+	<h1>Agular Js Scope</h1>
+	<!-- {{}} this is an anguler expression-->
+	<div class="container" ng-controller="contrlOne as myObj">
+		{{myObj}}
+		<div class="clearfix"></div>
+		{{myObj.name}}
+		{{myObj.age}}
+		{{myObj.height}}
+		<div class="clearfix"></div>
+		<ul>
+			<li>
+				{{myObj.name}}
+		{{myObj.age}}
+		{{myObj.height}}
+			</li>
+		</ul>
+	</div>
+
+
+
+
+	<script>
+		
+	</script>
+</body>
+</html>
